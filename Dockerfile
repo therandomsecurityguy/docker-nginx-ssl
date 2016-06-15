@@ -5,10 +5,10 @@ ENV LANG C.UTF-8
 
 RUN apt-get update \
  && apt-get install -y openssl \
- && rm -rf /etc/nginx/conf.d/*; \
+ && rm -rf /etc/nginx/conf.d/* \
  && mkdir -p /etc/nginx/external \
- && sed -i 's/access_log.*/access_log \/dev\/stdout;/g' /etc/nginx/nginx.conf; \
- && sed -i 's/error_log.*/error_log \/dev\/stdout info;/g' /etc/nginx/nginx.conf; \
+ && sed -i 's/access_log.*/access_log \/dev\/stdout;/g' /etc/nginx/nginx.conf \
+ && sed -i 's/error_log.*/error_log \/dev\/stdout info;/g' /etc/nginx/nginx.conf \
  && sed -i 's/^pid/daemon off;\npid/g' /etc/nginx/nginx.conf
 
 COPY bin/basic.conf /etc/nginx/conf.d/basic.conf
