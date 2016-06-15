@@ -4,7 +4,7 @@ MAINTAINER Derek Chamorro <therandomsecurityguy@gmail.com>
 ENV LANG C.UTF-8
 
 RUN apt-get update \
- && apt-get install -y openssl
+ && apt-get install -y openssl \
  && rm -rf /etc/nginx/conf.d/*; \
  && mkdir -p /etc/nginx/external \
  && sed -i 's/access_log.*/access_log \/dev\/stdout;/g' /etc/nginx/nginx.conf; \
