@@ -18,7 +18,7 @@ You should overwrite the /etc/nginx/external/ with a folder, containing your ngi
 
 To create a Diffie-Hellman cert, you can use the following command
 
-    openssl dhparam -out dh4096.pem 2048
+    openssl dhparam -out dh2048.pem 2048
 
 ### Creating CSR with OpenSSL
 
