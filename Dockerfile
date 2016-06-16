@@ -11,7 +11,6 @@ RUN apt-get update \
  && sed -i 's/error_log.*/error_log \/dev\/stdout info;/g' /etc/nginx/nginx.conf \
  && sed -i 's/^pid/daemon off;\npid/g' /etc/nginx/nginx.conf
 
-COPY bin/basic.conf /etc/nginx/conf.d/basic.conf
 COPY bin/ssl.conf /etc/nginx/conf.d/ssl.conf
 
 COPY entrypoint.sh /opt/entrypoint.sh
